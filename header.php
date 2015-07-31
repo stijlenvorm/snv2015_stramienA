@@ -19,30 +19,28 @@
 </head>
 <body <?php body_class( ); ?>>
 
-	<header role="banner">
+	<header class="pageHeader">
 
 		<div class="container">	
-			<div class="row">	
 				
-				<div class="col-xs-12 col-sm-2">
 					<div class="logo">
 						<a href="<?php echo get_site_url(); ?>" title="<?php echo bloginfo('name'); ?> - <?php echo bloginfo('description'); ?>"><img src="<?php echo get_option('home-logo'); ?>" alt="<?php echo bloginfo( 'name' ); ?>"></a>
 					</div>
 
-				</div>
 
-				<div class="col-xs-12 no-padding-xs col-sm-10">
-					
-					<div class="mobile_menuToggle">
-						<span></span>
-						<span></span>
-						<span></span>
+					<div class="menuHolder">
+						<div class="mobile_menuToggle">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+
+						<nav role="navigation" id="main_navigation" class="header_menu hideMenuMobile">
+							<?php wp_nav_menu( array( 'header_menu' => 'header-menu' ) ); ?>
+						</nav>		
 					</div>
+					
 
-					<nav role="navigation" id="main_navigation" class="header_menu hideMenuMobile">
-						<?php wp_nav_menu( array( 'header_menu' => 'header-menu' ) ); ?>
-					</nav>
-				</div>
 			</div>
 		</div>
 
