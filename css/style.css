@@ -1,7 +1,4 @@
-/* base styles
-    ////////////
-    body, h1, a etc
-    //////////// */
+/* base styles */
 
 body {
     background: #fff;
@@ -100,13 +97,7 @@ p {
 }
 
 
-/* Header styles
-    ////////////
-    header, logo, search, navigation
-    //////////// */
-
-
-/* fixed header */
+/* Header styles */
 
 *,
 *:focus,
@@ -254,10 +245,7 @@ header.shrink .header_menu ul.sub-menu {
 }
 
 
-/* Footer styles
-    ////////////
-    Footer styles
-    //////////// */
+/* Footer styles  */
 
 footer {
     margin-top: 0;
@@ -289,7 +277,6 @@ footer .social_media i {
 .paginaHeader {
     margin: 0 0 50px 0;
     width: 100%;
-    background: #eee;
     overflow: hidden;
     position: relative;
 }
@@ -308,6 +295,26 @@ footer .social_media i {
 
 .paginaHeader img {
     width: 100%;
+}
+
+.paginaHeaderContent {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+}
+.paginaHeaderContentTitel {
+    font-size: 5em;
+    height: 1em;
+}
+.paginaHeaderContentSubtitel {
+    font-size: 3em;
+    height: 1em;
+}
+
+.paginaHeaderContent * {
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
 .header_slogan {
@@ -400,13 +407,7 @@ footer .social_media i {
 }
 
 
-/* content styles
-    ////////////
-    content styles
-    //////////// */
-
-
-/* contact info list */
+/* content styles */
 
 #top_blocks {
     padding: 100px 0;
@@ -574,8 +575,7 @@ footer .social_media i {
 
 #parallax_bottom {
     padding: 80px 0;
-    background: url();
-    /* chanche me */
+    background: url(../images/footer_fallback_image.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -628,10 +628,7 @@ footer .social_media i {
 }
 
 
-/* Forumulieren
-    ////////////
-    FOMRS
-    //////////// */
+/* Forumulieren */
 
 body .gform_wrapper label.gfield_label+div.ginput_container {
     margin: 0 !important;
@@ -718,10 +715,7 @@ body .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 
-/* sidebar
-    ////////////
-    
-    //////////// */
+/* sidebar */
 
 #sidebar {
     margin-bottom: 50px;
@@ -795,10 +789,7 @@ body .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 
-/* Post
-    ////////////
-    Post
-    //////////// */
+/* Post */
 
 .post_meta .post-categories {
     padding: 0;
@@ -845,10 +836,7 @@ a.moretag {
 }
 
 
-/* Responsive
-    ////////////
-    bootstrap linked media queries
-    //////////// */
+/* Responsive  */
 
 
 /*==========  Mobile First Method  ==========*/
@@ -906,10 +894,7 @@ a.moretag {
 /* Small Devices, Tablets */
 
 @media only screen and (max-width: 768px) {
-    /* header
-        ////////////
-        
-        //////////// */
+    /* header */
     .mobile_menuToggle.active span {
         background: #222;
     }

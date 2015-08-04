@@ -1,8 +1,6 @@
 <?php get_header(); ?>
-
-<?php the_post(); ?>
-
 <?php do_action('contentheader'); ?>
+<?php the_post(); ?>
 
 <div class="container">
 

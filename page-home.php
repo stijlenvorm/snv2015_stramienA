@@ -1,19 +1,8 @@
-<?php 
-/* Template name: Homepage  */
+<?php  /* Template name: Homepage  */ ?>
 
-get_header(); ?>
+<?php get_header(); ?>
 <?php the_post(); ?>
-
-<div class="paginaHeader">
-	<video id="headerVideo" width="100%" height="1050" autoplay loop muted>
-		<source src="<?php echo get_stylesheet_directory_uri(); ?>/video/video.mp4" type="video/mp4">	
-	</video>
-
-	<h4 class="header_slogan">
-		Hier komt een vette slogan
-		<span>met nog een subtitel</span>
-	</h4>
-</div>
+<?php do_action('contentheader'); ?>
 
 <div id="intro_text">
 	<div class="container">

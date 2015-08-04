@@ -2,9 +2,7 @@
 /* Template name: Geen sidebar */
 
 get_header(); ?>
-
 <?php the_post(); ?>
-
 <?php do_action('contentheader'); ?>
 
 <div class="container">
