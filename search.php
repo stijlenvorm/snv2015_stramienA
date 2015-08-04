@@ -1,41 +1,23 @@
 <?php get_header(); ?>
-
-<?php the_post(); ?>
-
 <?php do_action('contentheader'); ?>
-
+<div class="noHeader"></div>
 <div class="container">
+    <div class="row">
+        
+        <div class="col-xd-12 col-sm-8 " role="main">
+        	<h1>Zoekresultaten voor <?php echo $_GET['s'] ?></h1>
+            <?php while ( have_posts() ) : the_post(); ?>
+				<article class="">
+					<a href="<?php echo get_permalink(); ?>"><h2><?php echo get_the_title(); ?></h2></a>
+					<?php echo the_excerpt(); ?>
+				</article>				
+			<?php endwhile; ?>
+        </div>
 
-	<div class="row">
+        <div class="hidden-xs col-sm-4" role="complementary">
+            <?php get_template_part( 'sidebar' ); ?>
+        </div>
 
-		<div class="col-xd-12 col-sm-9" role="main">
-			<div id="breadcrumb">
-				<?php
-				if ( function_exists( 'yoast_breadcrumb' ) ) {
-					yoast_breadcrumb();
-				}
-				?>
-			</div>
-			<div class="main-content">
-				<h1><?php the_title( ); ?></h1>
-				
-				<div>
-					<?php the_content( ); ?>
-				</div>
-			</div>
-		</div>
-
-
-
-		<div class="hidden-xs col-sm-3" role="complementary">
-			<div id="sidebar">
-				<?php get_template_part( 'sidebar' ); ?>
-			</div>
-		</div>
-
-	</div>
-
+    </div>
 </div>
-
 <?php get_footer(); ?>
-

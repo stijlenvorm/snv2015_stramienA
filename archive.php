@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php do_action('contentheader'); ?>
 
 <div class="paginaHeader"></div>
 <div class="container">

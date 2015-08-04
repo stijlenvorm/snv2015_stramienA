@@ -1,9 +1,6 @@
 <?php 
-/*
-*
-* Template name: Geen sidebar
-*
-*/
+/* Template name: Geen sidebar */
+
 get_header(); ?>
 
 <?php the_post(); ?>

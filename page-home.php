@@ -1,9 +1,5 @@
-<?php
-/* 
-*
-*Template name: Homepage 
-*
-*/
+<?php 
+/* Template name: Homepage  */
 
 get_header(); ?>
 <?php the_post(); ?>
@@ -52,7 +48,6 @@ get_header(); ?>
 	</div>
 </div>
 
-
 <div id="c2a_banner">
 	<div class="container">
 		<div class="row">
@@ -68,7 +63,11 @@ get_header(); ?>
 			<div class="row">
 
 				<div class="col-sm-8 col-xs-12">
-					<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true" tabindex="20"]'); ?>
+					<?php if ( shortcode_exists('gravityform')): ?>
+						<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true" tabindex="20"]'); ?>						
+					<?php else : ?>
+						<p>Gravity forms is niet geinstalleerd....</p>
+					<?php endif ?>
 				</div>
 
 				<div class="col-sm-4 col-xs-12 hidden-xs text-right">

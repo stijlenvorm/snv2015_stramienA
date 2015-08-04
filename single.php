@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php do_action('contentheader'); ?>
 <?php the_post(); ?>
 
 	<?php 
