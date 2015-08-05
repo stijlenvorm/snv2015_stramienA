@@ -5,9 +5,6 @@ add_image_size('header-image-large-home', '1900', '400', true);
 add_image_size('header-image-medium-home', '768', '162', true);
 add_image_size('header-image-small-home', '480', '300', true);
 
-// change to get_option('header_titles');
-define('HEADER_TITLES', true);
-
 function snvChildEnqueueScriptStyles()
 {
     wp_enqueue_style('theme_child', get_stylesheet_directory_uri() . '/css/style.css', array('bootstrap', 'theme'), '1.0', 'all');
@@ -20,8 +17,8 @@ function registerMyMenus()
 {
     register_nav_menus(
         array(
-            'header-menu' => __('Header Menu'),
-            'footer-menu' => __('Footer Menu'),
+            'header-menu' => 'Header Menu',
+            'footer-menu' => 'Footer Menu',
         ));
 }
 add_action('init', 'registerMyMenus');
@@ -35,4 +32,23 @@ function getExcerpt($count)
     $excerpt = substr($excerpt, 0, $count);
     $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
     return $excerpt;
+}
+
+add_action('admin_init',  'actionsToAdd');
+function actionsToAdd()
+{
+    register_setting('contact-settings-group', 'footer_slogan');
+    register_setting('contact-settings-group', 'footer_background');
+}
+
+add_action('templateChildInformationOptions',  'templateOptionsInformation');
+function templateOptionsInformation()
+{
+    echo get_template_part('admin/informationOptionsTemplate');
+}
+
+add_action('templateChildThemeOptions',  'templateOptionsTheme');
+function templateOptionsTheme()
+{
+    echo get_template_part('admin/themesOptionsTemplate');
 }

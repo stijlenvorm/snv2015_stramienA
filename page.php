@@ -23,14 +23,12 @@
 			</div>
 		</div>
 
-
-
 		<div class="hidden-xs col-sm-3" role="complementary">
 			<?php get_template_part( 'sidebar' ); ?>
 		</div>
 
 	</div>
-
+	
 </div>
 
 <?php get_footer(); ?>
