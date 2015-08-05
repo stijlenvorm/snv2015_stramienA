@@ -176,6 +176,8 @@ header.shrink .header_menu ul {
     padding: 0;
 }
 
+
+
 .header_menu .menu>li {
     padding: 0 10px;
     position: relative;
@@ -220,21 +222,7 @@ header.shrink .header_menu ul {
     display: block;
 }
 
-.header_menu .sub-menu li a {
-    display: block;
-    text-transform: none;
-    padding: 5px !important;
-    color: #999 !important;
-    font-weight: 500 !important;
-}
 
-.header_menu .sub-menu li a:hover {
-    color: #333 !important;
-}
-
-.header_menu .sub-menu li.current_page_item a {
-    color: #333 !important;
-}
 
 .header_menu .sub-menu {
     margin: 50px 0 0 0;
@@ -842,7 +830,7 @@ a.moretag {
 /*==========  Mobile First Method  ==========*/
 
 
-/* Custom, iPhone Retina */
+/* Custom, iPhone Retina */ 
 
 @media only screen and (min-width: 320px) {}
 
@@ -860,6 +848,39 @@ a.moretag {
     }
     .menuHolder {
         float: right;
+    }
+
+    .pageHeader .container {
+        position: relative;
+    }
+
+    .header_menu ul{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+    .header_menu .menu>li {
+        height: 100%;
+    }
+    .header_menu li:hover .sub-menu {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            float: none;
+            padding: 0;
+            min-width: 100%;
+    }
+    .sub-menu li {
+        width: 100%;
+        display: block;
+        position: relative;
+        float: none;
+        background-color: #eee;
+    }
+    .sub-menu li a{
+        padding: 0 10px;
     }
 }
 
@@ -926,7 +947,12 @@ a.moretag {
         margin-bottom: 50px;
     }
     .header_menu ul {
-        margin: 0 0 20px 0;
+            margin: 0 0 20px 0;
+    width: 100%;
+    text-align: center;
+    }
+    .header_menu .menu>li a {
+        text-align: center;
     }
     header {
         position: fixed;
